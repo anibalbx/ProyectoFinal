@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/lblBusqueda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar por:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/spiBusqueda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtBusqueda"
+            android:layout_width="380dp"
+            android:layout_height="84dp"
+            android:layout_weight="1.40"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/btnCamara"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_weight="0.98"
+            android:backgroundTint="#00B6FF"
+            app:srcCompat="@drawable/ic_barcode_scan_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_weight="0.98"
+            android:backgroundTint="#00B6FF"
+            app:srcCompat="@drawable/ic_magnify_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.98"
+            android:backgroundTint="#FF5F5F"
+            app:srcCompat="@drawable/ic_broom_white_24dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados:"
+        android:textSize="24sp"
+        android:textColor="#88E365"/>
+
+    <ListView
+        android:id="@+id/lstRuedas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

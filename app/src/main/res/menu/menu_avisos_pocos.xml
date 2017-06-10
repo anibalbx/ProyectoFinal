@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/opAnadirPoco"
+        android:title="Añadir"></item>
+    <item android:id="@+id/opEditarPoco"
+        android:title="Editar"></item>
+    <item android:id="@+id/opRetirarPoco"
+        android:title="Retirar"></item>
+    <item android:id="@+id/opEliminarPoco"
+        android:title="Eliminar"></item>
+
+
+</menu>

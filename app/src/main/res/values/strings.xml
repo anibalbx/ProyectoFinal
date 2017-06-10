@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Control de stock</string>
+    <string name="user">Usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="remember">Recuérdame</string>
+    <string name="enter">Entrar</string>
+
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="584dp"
+        android:layout_height="871dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+
+        <EditText
+            android:id="@+id/txtUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="670dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="152dp"
+            android:ems="10"
+            android:hint="@string/user"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:id="@+id/txtPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/txtUser"
+            android:layout_alignTop="@+id/txtUser"
+            android:layout_marginBottom="570dp"
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:textSize="24sp"
+            android:layout_alignEnd="@+id/txtUser" />
+
+        <CheckBox
+            android:id="@+id/cbxRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/txtPass"
+            android:layout_alignTop="@+id/txtPass"
+            android:layout_marginBottom="479dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/remember"
+            android:textSize="24sp"
+            android:layout_alignEnd="@+id/txtPass" />
+
+        <Button
+            android:id="@+id/btnEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cbxRemember"
+            android:layout_alignTop="@+id/cbxRemember"
+            android:layout_marginBottom="360dp"
+            android:layout_marginTop="100dp"
+            android:background="#00B6FF"
+            android:text="@string/enter"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/cbxRemember" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logorasiga"
+            android:layout_marginStart="92dp"
+            android:layout_marginBottom="38dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="125dp"
+            android:layout_alignTop="@+id/btnEnter"
+            android:layout_alignEnd="@+id/btnEnter"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

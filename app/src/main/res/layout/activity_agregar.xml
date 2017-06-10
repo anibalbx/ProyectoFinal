@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtReferencia"
+            android:layout_width="380dp"
+            android:layout_height="84dp"
+            android:layout_weight="1.40"
+            android:hint="Referencia"
+            android:inputType="number"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/btnCamara"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_weight="0.98"
+            android:backgroundTint="#00B6FF"
+            app:srcCompat="@drawable/ic_barcode_scan_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_weight="0.98"
+            android:backgroundTint="#00B6FF"
+            app:srcCompat="@drawable/ic_magnify_white_24dp" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stock:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtStock"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/lblMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marca:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/lblModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modelo:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/lblMedida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Medida:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtMedida"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/lblIdc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IDC:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtIdc"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/lblIdv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IDV:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtIdv"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/lblTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/spiTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="#88E365"
+            app:srcCompat="@drawable/ic_check_white_48dp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+
+
+

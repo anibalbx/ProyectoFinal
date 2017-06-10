@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/opSincro"
+        android:title="Cargar datos de servidor"></item>
+    <item android:id="@+id/opCerrar"
+        android:title="Cerrar sesion"></item>
+    <item android:id="@+id/opSalir"
+        android:title="Salir"></item>
+
+
+
+</menu>
