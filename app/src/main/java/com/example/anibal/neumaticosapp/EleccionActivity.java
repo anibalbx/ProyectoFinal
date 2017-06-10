@@ -183,7 +183,7 @@ public class EleccionActivity extends AppCompatActivity {
         Cursor c = db.rawQuery("SELECT * FROM Tires ORDER BY referencia", null);
 
         if (c.moveToFirst()) {
-            //Recorremos el cursor hasta que no haya m?s registros
+
 
             System.out.println("Existe el registro");
             do {
@@ -217,17 +217,13 @@ public class EleccionActivity extends AppCompatActivity {
 
         try
         {
-            /**
-             * Reading the CSV File
-             * Delimiter is comma
-             * Start reading from line 1
-             */
+
             csvReader = new CSVReader(new FileReader(Environment.getExternalStorageDirectory().getAbsolutePath() + "/neumaticos.csv"),',','"',1);
-            //employeeDetails stores the values current line
+
             String[] TireDetails = null;
             while((TireDetails = csvReader.readNext())!=null)
             {
-                //Printing to the console
+
                 System.out.println(TireDetails[0]);
                 System.out.println(Arrays.toString(TireDetails));
 
@@ -279,7 +275,7 @@ public class EleccionActivity extends AppCompatActivity {
 
             @Override
             protected String doInBackground(String... params) {
-                HttpFileUploader uploader = new HttpFileUploader("http://192.168.1.201/insertar_imagen.php", finalname);
+                HttpFileUploader uploader = new HttpFileUploader("http://192.168.1.201/insertar_csv.php", finalname);
                 try {
                     uploader.doStart(new FileInputStream(name));
                 } catch (FileNotFoundException e) {
@@ -320,86 +316,6 @@ public class EleccionActivity extends AppCompatActivity {
         UploadAsync la = new UploadAsync();
         la.execute(name);
     }
-/*
-    class DownloadFileFromURL extends AsyncTask<String, String, String> {
-
-
-        Dialog pdialog;
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pdialog = ProgressDialog.show(EleccionActivity.this, "Por favor espere", "descargarndo...");
-        }
-
-
-        @Override
-        protected String doInBackground(String... f_url) {
-            int count;
-            try {
-                URL url = new URL(f_url[0]);
-                URLConnection conection = url.openConnection();
-                conection.connect();
-
-                // this will be useful so that you can show a tipical 0-100%
-                // progress bar
-                int lenghtOfFile = conection.getContentLength();
-
-                // download the file
-                InputStream input = new BufferedInputStream(url.openStream(),
-                        8192);
-
-                // Output stream
-                OutputStream output = new FileOutputStream(Environment
-                        .getExternalStorageDirectory().toString()
-                        + "/neumaticos.csv");
-
-                byte data[] = new byte[1024];
-
-                long total = 0;
-
-                while ((count = input.read(data)) != -1) {
-                    total += count;
-                    // publishing the progress....
-                    // After this onProgressUpdate will be called
-                    publishProgress("" + (int) ((total * 100) / lenghtOfFile));
-
-                    // writing data to file
-                    output.write(data, 0, count);
-                }
-
-                // flushing output
-                output.flush();
-
-                // closing streams
-                output.close();
-                input.close();
-
-            }  catch (FileNotFoundException ex){
-                Toast.makeText(getApplicationContext(),"Error de sincronización: " +ex,Toast.LENGTH_SHORT).show();
-
-
-
-            }catch (IOException ix){
-                Toast.makeText(getApplicationContext(),"Error de sincronización: " +ix,Toast.LENGTH_SHORT).show();
-
-
-            }
-
-            return null;
-        }
-
-
-
-        @Override
-        protected void onPostExecute(String file_url) {
-            // dismiss the dialog after the file was downloaded
-            pdialog.dismiss();
-            ReadCsv();
-            Toast.makeText(getApplicationContext(),"Base de datos recargada satisfactoriamente",Toast.LENGTH_LONG).show();
-
-        }
-
-    } */
 
     public void accionRecargar(){
         db.execSQL("DELETE FROM Tires");
@@ -471,8 +387,7 @@ public class EleccionActivity extends AppCompatActivity {
                 connection = (HttpURLConnection) url.openConnection();
                 connection.connect();
 
-                // expect HTTP 200 OK, so we don't mistakenly save error report
-                // instead of the file
+
                 if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
 
                     System.out.println("NO HAY NADA");
@@ -490,13 +405,9 @@ public class EleccionActivity extends AppCompatActivity {
 
 
 
-
-
-                // this will be useful to display download percentage
-                // might be -1: server did not report the length
                 int fileLength = connection.getContentLength();
 
-                // download the file
+
                 input = connection.getInputStream();
 
                 output = new FileOutputStream(Environment
@@ -507,14 +418,14 @@ public class EleccionActivity extends AppCompatActivity {
                 long total = 0;
                 int count;
                 while ((count = input.read(data)) != -1) {
-                    // allow canceling with back button
+
                     if (isCancelled()) {
                         input.close();
                         return null;
                     }
                     total += count;
-                    // publishing the progress....
-                    if (fileLength > 0) // only if total length is known
+
+                    if (fileLength > 0)
                         publishProgress((int) (total * 100 / fileLength));
                     output.write(data, 0, count);
                 }
@@ -537,7 +448,7 @@ public class EleccionActivity extends AppCompatActivity {
         }
         @Override
         protected void onPostExecute(String file_url) {
-            // dismiss the dialog after the file was downloaded
+
             pdialog.dismiss();
             ReadCsv();
 
