@@ -252,7 +252,7 @@ public class EleccionActivity extends AppCompatActivity {
         {
             try
             {
-                //closing the reader
+
                 csvReader.close();
             }
             catch(Exception ee)
