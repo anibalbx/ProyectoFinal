@@ -140,6 +140,7 @@ public class AvisosActivity extends AppCompatActivity {
                 startActivity(a);
 
 
+
                 return true;
             case R.id.opRetirarPoco:
                 createRetirarDialog(ruedaspoco.get(info.position).getReferencia(),Integer.parseInt(ruedaspoco.get(info.position).getStock())).show();
